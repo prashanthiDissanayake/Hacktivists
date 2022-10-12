@@ -84,7 +84,29 @@ useEffect(() =>{
     var n = 0;
     var i = 0;
 
-    //while
+    while(i < order.length){
+      if(deliver[0] == null){
+        OID = order[0].orderID
+        cusName = order[0].name
+        address = order[0].address
+        break
+      }
+
+      if(order[i].orderID == deliver[n].deliverID){
+        i = i+1
+      }
+      else{
+        if(deliver[n+1] == null){
+          OID = order[i].orderID
+          cusName = order[i].name
+          address = order[i].address
+          break
+        }
+        else{
+          n=n+1
+        }
+      }
+    }
 
     console.log(OID);
 
