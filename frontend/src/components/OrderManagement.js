@@ -37,7 +37,9 @@ const OrderManagement = () => {
     
     }, [])
 
-    //backHome
+    const backHome = () => {
+        navigate(-1);
+    }
 
 
     return (
