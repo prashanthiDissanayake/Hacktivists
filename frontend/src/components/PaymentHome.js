@@ -54,7 +54,14 @@ const PaymentHome = () => {
       var i = 0;
       var ID = "";
 
-      //while
+      while(i < order.length){
+          if(state.orderID == order[i].orderID){
+            ID = order[i]._id;
+            amount = order[i].total
+            break;
+          }
+          i = i + 1;
+      }
         
       const newPayment = {
           cardName,
