@@ -57,7 +57,13 @@ const PaymentView = () => {
             var i = 0;
             var ID = "";
 
-            //while
+            while(i < payment.length){
+                if(order.orderID == payment[i].IDOrder){
+                  ID = payment[i]._id
+                  break
+                }
+                i = i + 1
+            }
 
             navigate(`/invoice/${ID}`, { state: { ...payment } })
             
